@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        h1{
+            padding-bottom: 0.8em;
+        }
+        br{
+            padding: 10px;
+        }
+        label{
+            display: block;
+        }
+        .same{
+            display: inline;
+        }
+        .errorDiv{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FORM</h1>
+        <form action="">
+            <label for="edu">Educational Qualification:</label>
+            <select name="education" id="edu">
+                <option value="10th">10th Standard</option>
+                <option value="+2">12th Standard</option>
+                <option value="ug">Undergraduate</option>
+                <option value="pg">Postgraduate</option>
+            </select>
+            <br><br>
+            <label for="phno">Phone number:</label>
+            <input type="text" name="PN" placeholder="Enter your phone number" id="phno">
+            <div id="phoneError" class="errorDiv"></div>
+            <br>
+            <label for="age">Age:</label>
+            <input type="text" id="age" placeholder="Enter your age">
+            <div id="ageError" class="errorDiv"></div>
+            <br>
+            <label for="gen" class="same">Gender:</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male" class="same">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female" class="same">Female</label>
+            <input type="radio" name="gender" id="others">
+            <label for="others" class="same">Others</label>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="text" placeholder="Enter your email address" name="emailadd" id="email">
+            <div id="emailError" class="errorDiv"></div>
+            <br>
+            <label for="pass">Password:</label>
+            <input type="password" name="PW" id="pass" placeholder="Enter your password">
+            <div>Password should contain minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</div>
+            <div id="passError" class="errorDiv"></div>
+            <br>
+            <label for="cpass">Confirm password:</label>
+            <input type="password" name="CPW" id="cpass" placeholder="Confirm your password">
+            <div id="cpassError" class="errorDiv"></div>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" name="N" id="name" placeholder="Enter your name">
+            <div id="nameError" class="errorDiv"></div>
+            <br>
+            <label for="city">City:</label>
+            <input type="text" name="Ct" id="city" placeholder="Enter your city name">
+            <div id="cityError" class="errorDiv"></div>
+            <br>
+            
+        </form>
+        <button onclick="sub()">Submit</button>
+    </div>
+    <script src="q1.js"></script>
+</body>
+</html>
