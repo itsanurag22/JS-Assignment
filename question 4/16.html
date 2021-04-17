@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 72px;
+            height: 72px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+
+
+        <tr valign="top" align="center"><td>
+        <img src="marble1.jpg" class="marble" id="m1" onmouseover="stop()">
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <img src="marble1.jpg" class="marble" id="m2" onmouseover="stop()">
+        </td></tr>
+        
+        <tr valign="top" align="center"><td>
+        &nbsp;<br><br>
+        </td></tr>
+        
+        
+        <tr valign="top" align="center"><td>
+        <img src="marble1.jpg" class="marble" id="m6" onmouseover="stop()" onmouseout="func()">
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <img src="marble1.jpg" class="marble" id="" onmouseover="stop()" onmouseout="func()">
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <img src="marble1.jpg" class="marble" id="m3" onmouseover="stop()" onmouseout="func()">
+        </td></tr>
+        
+        <tr valign="top" align="center"><td>
+        &nbsp;<br><br>
+        </td></tr>
+        
+        
+        
+        <tr valign="top" align="center"><td>
+        <img src="marble1.jpg" class="marble" id="m5" onmouseover="stop()" onmouseout="func()">
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <img src="marble1.jpg" class="marble" id="m4" onmouseover="stop()" onmouseout="func()">
+        </td></tr>
+        
+        
+        </table>
+        <button onclick="func()">Start</button>
+        <script>
+
+            var a=0;
+            var anime;
+        function func(){
+            anime=setInterval(start,500);
+        }
+            function start(){
+                a++;
+                if(a==7){
+                    a=1;
+                    document.getElementById("m"+6).src="marble1.jpg";
+                    
+                }
+                document.getElementById("m"+a).src="orange.jfif";
+                for(var b=1; b<a; b++){
+                    document.getElementById("m"+b).src="marble1.jpg";
+                }
+                
+            }
+            function stop(){
+                clearInterval(anime);
+            }
+        </script>
+</body>
+</html>
