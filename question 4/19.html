@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+</head>
+<body onload="checkCookie()">
+    <p>Hello there!</p>
+    <img src="img2.jpg">
+    <p id="number"></p>
+    <p id="time-visit"></p>
+    <script>
+        function setCookie(cname, cvalue) {
+        var d = new Date();
+        d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires ;
+        }
+        function changeCookie(cname,cvalue){ // Changes value of cookies
+            document.cookie= cname+"="+cvalue+";";
+        }
+        function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+        function checkCookie() {
+        var user = getCookie("username");
+        var visits = getCookie("VISIT");
+        
+        var time = getCookie("visitTime");
+        if(visits !=""){
+            visits= parseInt(visits);
+            visits++;
+            console.log(visits);
+            document.getElementById("number").innerHTML="You have visited "+ visits + " number of times.";
+            changeCookie("VISIT", visits);
+        }
+        else{
+            visits=1;
+            document.getElementById("number").innerHTML="This is your first time";
+            changeCookie("VISIT",visits);
+        }
+        if(time!=""){
+            
+            document.getElementById("time-visit").innerHTML="You have last visited on "+ time;
+            time = new Date();
+            changeCookie("visitTime", time);
+        }
+        else{
+            time =new Date();
+            changeCookie("visitTime", time);
+        }
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+            user = prompt("Please enter your name:", "");
+            if (user != "" && user != null) {
+            setCookie("username", user);
+            }
+        }
+        }
+    </script>
+</body>
+</html>

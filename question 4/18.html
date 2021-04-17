@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18</title>
+</head>
+<body>
+    <img src="img.jpg" onclick="fn()"><br>
+    <button onclick="cl()">Close windows</button>
+    <script>
+        var win =[];
+        function fn(){
+            var sW= screen.availWidth;
+            var sH= screen.availHeight;
+
+           win[0]= window.open("https://www.google.com", "", "top=0,left=0,width=300,height=300");
+           win[1]= window.open("https://www.bing.com", "", "top=0,left="+(sW)+",width=300,height=300");
+           win[2]= window.open("https://www.youtube.com", "", "top="+(sH)+",left="+(sW)+",width=300,height=300");
+           win[3]= window.open("https://www.google.com", "", "top="+(sH)+",left=0,width=300,height=300");
+           win[4]= window.open("https://www.w3schools.com", "", "top="+((sH-300)/2)+",left="+((sW-300)/2)+",width=300,height=300");
+        }
+        function cl(){
+            for(var i=0; i<win.length; i++){
+                win[i].close();
+                console.log(i);
+            }
+            window.close();
+        }
+    </script>
+</body>
+</html>

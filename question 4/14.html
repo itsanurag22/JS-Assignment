@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+    <script>
+        var x=0;
+        function fn(){
+            x++;
+            if(x==1){
+                document.getElementsByTagName("img")[0].src="img2.jpg";
+            }
+            else if(x==2){
+                document.getElementsByTagName("img")[0].src="img3.jpg";
+            }
+            else if(x==3){
+                document.getElementsByTagName("img")[0].src="img5.jpg";
+            }
+            if(x==4){
+                document.getElementsByTagName("img")[0].src="img6.jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="img.jpg" alt="image" onclick="fn()">
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+    <style>
+        img{
+            display: block;
+            width: 500px;
+            height: 400px;
+        }
+        #bck{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<img src="img.jpg">
+<button id="bck" onclick="back()">Back</button>
+<button id="frd" onclick="forward()">Forward</button>
+<script>
+    var x=1;
+    var f= document.getElementById("frd");
+    var b= document.getElementById("bck");
+    var i=document.getElementsByTagName("img")[0];
+    function back(){
+        x--;
+        if(x==1){
+            b.style.display="none";
+            i.src="img.jpg";
+            f.style.display="block";
+
+        }
+        if(x==2){
+            i.src="img2.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==3){
+            i.src="img3.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==4){
+            i.src="img4.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==5){
+            i.src="img5.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==6){
+            i.src="img6.jpg";
+            f.style.display="none";
+            b.style.display="block";
+        }
+    }
+    function forward(){
+        x++;
+        if(x==1){
+            b.style.display="none";
+            i.src="img.jpg";
+            f.style.display="block";
+
+        }
+        if(x==2){
+            i.src="img2.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==3){
+            i.src="img3.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==4){
+            i.src="img4.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==5){
+            i.src="img5.jpg";
+            b.style.display="block";
+            f.style.display="block";
+        }
+        if(x==6){
+            i.src="img6.jpg";
+            f.style.display="none";
+            b.style.display="block";
+        }
+    }
+</script>
+</body>
+</html>
