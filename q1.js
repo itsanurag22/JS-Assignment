@@ -19,7 +19,7 @@ phoneNo.addEventListener("blur", function(){
 
 });
 ageInput.addEventListener("blur", function(){
-    let regex= /[0-9]{1,3}/;
+    let regex= /^[0-9]+$/;
     let ageInputValue = ageInput.value;
     if(regex.test(ageInputValue)){
         document.getElementById("ageError").innerHTML="";
