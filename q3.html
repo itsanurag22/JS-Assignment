@@ -75,7 +75,7 @@
                     if(this.readyState == 4 && this.status == 200){
                         var obj = JSON.parse(this.responseText);
                         console.log(obj);
-                        alert("Login success");
+                        alert("Login success"+obj["token"]);
                     }
                     else if(this.readyState == 4 && this.status != 200){
                     alert("Check credentials");
